@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from music.models import *
+from .models import *
 
 class ArtistSerializer(serializers.HyperlinkedModelSerializer):
     ''' The ArtistSerializer class translates the Artists models into other formats, in this case JSON by default. that Products table so a database can be created from it.
