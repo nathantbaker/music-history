@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Arists(models.Model):
+class Artists(models.Model):
     '''
     The Artists Model contains the essential fields and behaviors of Artists Data.
 
@@ -11,7 +11,7 @@ class Arists(models.Model):
 
     Author: Nate Baker, Python Ponies
     '''
-    artist_name = models.CharField(max_length=200, blank=False, default='')
+    artist_name = models.CharField(max_length=200, blank=True, default='')
 
     def __str__(self):
         return '{0}'.format(self.artist_name)
