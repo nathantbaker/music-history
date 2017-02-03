@@ -20,7 +20,10 @@ from rest_framework.routers import DefaultRouter
 from .music.admin import *
 
 router = DefaultRouter()
-router.register(r'artists', views.ArtistsViewSet)
+router.register(r'artists', views.ArtistViewSet)
+router.register(r'songs', views.SongViewSet)
+router.register(r'albums', views.AlbumViewSet)
+router.register(r'genres', views.GenreViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
