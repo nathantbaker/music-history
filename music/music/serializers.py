@@ -1,6 +1,3 @@
-from rest_framework import serializers
-from .models import *
-
 class ArtistSerializer(serializers.HyperlinkedModelSerializer):
     ''' This class translates the Artist model into other formats, in this case JSON by default.
 
@@ -14,6 +11,7 @@ class ArtistSerializer(serializers.HyperlinkedModelSerializer):
         '''
         model = Artist
         fields = '__all__'
+
 
 class SongSerializer(serializers.HyperlinkedModelSerializer):
     ''' This class translates the Song model into other formats, in this case JSON by default.
@@ -29,6 +27,7 @@ class SongSerializer(serializers.HyperlinkedModelSerializer):
         model = Song
         fields = '__all__'
 
+
 class AlbumSerializer(serializers.HyperlinkedModelSerializer):
     ''' This class translates the Album model into other formats, in this case JSON by default.
 
@@ -42,6 +41,7 @@ class AlbumSerializer(serializers.HyperlinkedModelSerializer):
         '''
         model = Album
         fields = '__all__'
+
 
 class GenreSerializer(serializers.HyperlinkedModelSerializer):
     ''' This class translates the Genre model into other formats, in this case JSON by default.
